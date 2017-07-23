@@ -2,22 +2,6 @@
 layout: home
 ---
 
-{% comment %}
-=======================
-The following part extracts all the groups from all the tracks and makes a sorted uniq list.
-=======================
-{% endcomment %}
-
-{% assign tracks = site.tracks %}
-{% assign groups = "" %}
-{% for track in tracks %}
-    {% assign group = track.gruppo %}
-    {% unless group == "" %}
-      {% assign groups = groups | append:group | append:',' %}
-    {% endunless %}
-{% endfor %}
-{% assign groups = groups | split:',' | sort | uniq %}
-
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -28,45 +12,46 @@ The following part extracts all the groups from all the tracks and makes a sorte
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">CHI SIAMO</h3>
-  <p class="w3-center w3-large"><em>Amici che van per monti</em></p>
-  <p class="w3-center w3-xlarge">La montagna è fatta per tutti, non solo per gli alpinisti: <br />
+  <p class="w3-center w3-xlarge"><em>La montagna è fatta per tutti, non solo per gli alpinisti: <br />
       per coloro che desiderano il riposo nella quiete <br />
-      come per coloro che cercano nella fatica un riposo ancora più forte.</p>
+      come per coloro che cercano nella fatica un riposo ancora più forte.</em></p>
 </div>
-
-
 
 <!-- Container (Tracks Section) -->
-<div class="w3-content w3-container w3-padding-64" style="max-width:1280px" id="tracks">
+<div class="w3-content w3-container w3-padding-64" id="tracks">
     <h3 class="w3-center">ITINERARI</h3>
-
-    <div class="w3-row-padding">
-      {% for group in groups %}
-          <div class="w3-third w3-section">
-              <div class="w3-card-2">
-              <a href="{{ site.url }}/itinerari/{{ group | slugify }}" title="{{ group }}"><img src="{{ site.url }}/img/{{ group | slugify }}.jpg" style="width:100%" alt="{{ group }}"></a>
-                  <div class="w3-container w3-white">
-                      <h4>{{ group }}</h4>
-                  </div>
-              </div>
-          </div>
-      {% endfor %}
-    </div>
-
-    <!-- Container -->
-    <div class="w3-content w3-container w3-padding-32 w3-center">
-      <button class="w3-button w3-padding-large w3-light-grey">ESPLORA</button>
-    </div>
 </div>
+
+{% assign tracks = site.tracks %}
+{% assign groups = tracks | group_by: "gruppo" | sort: "nome" %}
+
+<!-- Container (Tracks Section) -->
 
 {% for group in groups %}
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide">{{ group }}</span>
+    <!-- Parallax Image with Group Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min" style="background-image: url('/img/{{ group.name | slugify }}.jpg')">
+        <div class="w3-display-middle">
+            <h3 class="w3-xxlarge w3-text-white w3-wide">{{ group.name }}</h3>
+        </div>
     </div>
-</div>
-
-
+    <div class="w3-content w3-container w3-padding-64" style="max-width:1280px" id="tracks-{{ group.name }}">
+        <div class="w3-row-padding">
+            {% for item in group.items %}
+                <div class="w3-third w3-section">
+                    <div class="w3-card-2">
+                        <a href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
+                            <img src="{{ site.url }}/img/{{ group.name | slugify }}.jpg" style="width:100%" alt="{{ group.name }}">
+                        </a>
+                        <div class="w3-container w3-white">
+                            <h4>
+                                <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
+                                {{ item.nome }}
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endfor %}
