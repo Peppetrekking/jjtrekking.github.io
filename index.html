@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>J&amp;J Trekking</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/jjt.css">
-</head>
-<body>
+---
+layout: home
+---
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button w3-text-black">J&amp;J Trekking</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-user"></i> CHI SIAMO</a>
-    <a href="#tracks" class="w3-bar-item w3-button w3-hide-small w3-text-black"><i class="fa fa-th"></i> ITINERARI</a>
-  </div>
+{% comment %}
+=======================
+The following part extracts all the groups from all the tracks and makes a sorted uniq list.
+=======================
+{% endcomment %}
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">CHI SIAMO</a>
-    <a href="#tracks" class="w3-bar-item w3-button" onclick="toggleFunction()">ITINERARI</a>
-  </div>
-</div>
+{% assign tracks = site.tracks %}
+{% assign groups = "" %}
+{% for track in tracks %}
+    {% assign group = track.gruppo %}
+    {% unless group == "" %}
+      {% assign groups = groups | append:group | append:',' %}
+    {% endunless %}
+{% endfor %}
+{% assign groups = groups | split:',' | sort | uniq %}
+
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -39,90 +29,44 @@
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">CHI SIAMO</h3>
-  <p class="w3-center w3-large"><em>Amici che camminano per monti</em></p>
+  <p class="w3-center w3-large"><em>Amici che van per monti</em></p>
   <p class="w3-center w3-xlarge">La montagna è fatta per tutti, non solo per gli alpinisti: <br />
       per coloro che desiderano il riposo nella quiete <br />
       come per coloro che cercano nella fatica un riposo ancora più forte.</p>
 </div>
 
 
-<!-- Container (Portfolio Section) -->
+
+<!-- Container (Tracks Section) -->
 <div class="w3-content w3-container w3-padding-64" style="max-width:1280px" id="tracks">
-  <h3 class="w3-center">ITINERARI</h3>
+    <h3 class="w3-center">ITINERARI</h3>
 
-  <div class="w3-row-padding">
-
-      <div class="w3-third w3-section">
-          <div class="w3-card-2">
-          <img src="/img/mountains.jpg" style="width:100%">
-              <div class="w3-container w3-white">
-                  <h4>Gran Sasso</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="w3-row-padding">
+      {% for group in groups %}
+          <div class="w3-third w3-section">
+              <div class="w3-card-2">
+              <a href="{{ site.url }}/itinerari/{{ group | slugify }}" title="{{ group }}"><img src="{{ site.url }}/img/{{ group | slugify }}.jpg" style="width:100%" alt="{{ group }}"></a>
+                  <div class="w3-container w3-white">
+                      <h4>{{ group }}</h4>
+                  </div>
               </div>
           </div>
-      </div>
+      {% endfor %}
+    </div>
 
-      <div class="w3-third w3-section">
-          <div class="w3-card-2">
-          <img src="/img/mountains.jpg" style="width:100%">
-              <div class="w3-container w3-white">
-                  <h4>Monte Gennaro</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="w3-third w3-section">
-          <div class="w3-card-2">
-          <img src="/img/mountains.jpg" style="width:100%">
-              <div class="w3-container w3-white">
-                  <h4>Carseolani</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              </div>
-          </div>
-      </div>
-
-  </div>
-
-  <!-- Container (About Section) -->
-  <div class="w3-content w3-container w3-padding-32 w3-center">
+    <!-- Container -->
+    <div class="w3-content w3-container w3-padding-32 w3-center">
       <button class="w3-button w3-padding-large w3-light-grey">ESPLORA</button>
-  </div>
+    </div>
+</div>
+
+{% for group in groups %}
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">{{ group }}</span>
+    </div>
 </div>
 
 
-
-<!-- Footer -->
-<footer class="w3-center w3-gray w3-padding-16">
-  <div class="w3-xlarge w3-section">
-    <p>J&amp;J Trekking</p>
-  </div>
-</footer>
-
-<script>
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
-</script>
-
-</body>
-</html>
+{% endfor %}
