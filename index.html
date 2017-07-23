@@ -5,9 +5,12 @@ layout: home
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">J&amp;J Trekking</span>
-  </div>
+    <div class="w3-display-middle" style="white-space:nowrap;">
+        <!--span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">J&amp;J Trekking</span-->
+        <h1>
+            <img src="/img/jjtrekking-logo.png" alt="J&amp;J Trekking">
+        </h1>
+    </div>
 </div>
 
 <!-- Container (About Section) -->
@@ -30,7 +33,7 @@ layout: home
 
 {% for group in groups %}
 
-    <div class="w3-content w3-container w3-padding-64" style="max-width:1280px" id="tracks-{{ group.name }}">
+    <div class="w3-content w3-container w3-padding-32" style="max-width:1280px" id="tracks-{{ group.name }}">
 
         <div class="w3-card-2 w3-margin">
             <!-- Parallax Image with Group Text -->
@@ -43,7 +46,7 @@ layout: home
             <!-- List of Items in Group -->
             <ul class="w3-ul w3-hoverable w3-white">
                 {% for item in group.items %}
-                    <li class="w3-padding-16">
+                    <li class="w3-padding-16 w3-hover-light-grey">
                         <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
                             <h4 class="w3-large">{{ item.nome }}</h4>
                         </a>

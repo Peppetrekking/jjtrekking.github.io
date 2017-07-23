@@ -10,7 +10,7 @@ body, html {
 }
 
 a.jj-noline {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 /* Create a Parallax Effect */
@@ -29,7 +29,6 @@ a.jj-noline {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("/img/home01.jpg");
     min-height: 200px;
 }
 
