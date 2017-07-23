@@ -60,18 +60,24 @@ Il percorso potrà essere modificato dagli organizzatori in funzione delle condi
 </div>
 
 <div markdown="0">
-
-    <div class="w3-row-padding w3-padding-16">
-        <div class="w3-half">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
+    <div class="w3-row-padding">
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
         </div>
-        <div class="w3-half">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
-          <img src="/img/mountains.jpg" style="width:100%" alt="Concrete meets bricks">
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom">
+            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
         </div>
     </div>
-
 </div>

@@ -32,7 +32,6 @@ layout: home
 {% for group in groups %}
     <div class="w3-content w3-container w3-padding-32" style="max-width:1280px" id="track-{{ group.name }}">
 
-        <div class="w3-card w3-margin">
             <!-- Parallax Image with Group Text -->
             <div class="bgimg-2 w3-display-container w3-opacity-min w3-greyscale-min" style="background-image: url('/img/{{ group.name | slugify }}.jpg')">
                 <div class="w3-display-middle" style="width:100%;">
@@ -41,7 +40,7 @@ layout: home
             </div>
 
             <!-- List of Items in Group -->
-            <ul class="w3-ul w3-hoverable w3-white">
+            <ul class="w3-ul w3-border w3-hoverable w3-white">
                 {% for item in group.items %}
                     <li class="w3-padding-16 w3-hover-light-grey">
                         <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
@@ -50,7 +49,6 @@ layout: home
                     </li>
                 {% endfor %}
             </ul>
-        </div>
 
     </div>
 {% endfor %}
