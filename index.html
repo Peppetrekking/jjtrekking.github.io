@@ -11,14 +11,15 @@ layout: home
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <p class="w3-center w3-xlarge"><em>La montagna è fatta per tutti, non solo per gli alpinisti: <br />
+<div class="w3-content w3-container w3-padding-32" id="about">
+  <p class="w3-center w3-large"><em>La montagna è fatta per tutti, non solo per gli alpinisti: <br />
       per coloro che desiderano il riposo nella quiete <br />
       come per coloro che cercano nella fatica un riposo ancora più forte.</em></p>
+  <p class="w3-center w3-medium"><em>Guido Rey</em></p>
 </div>
 
 <!-- Container (Tracks Section) -->
-<div class="w3-content w3-container w3-padding-64" id="tracks">
+<div class="w3-content w3-container w3-padding-32" id="tracks">
     <h3 class="w3-center">ITINERARI</h3>
 </div>
 
@@ -34,24 +35,18 @@ layout: home
             <h3 class="w3-xxlarge w3-text-white w3-wide">{{ group.name }}</h3>
         </div>
     </div>
+    <!-- List of Items in Group -->
     <div class="w3-content w3-container w3-padding-64" style="max-width:1280px" id="tracks-{{ group.name }}">
-        <div class="w3-row-padding">
-            {% for item in group.items %}
-                <div class="w3-third w3-section">
-                    <div class="w3-card-2">
-                        <a href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
-                            <img src="{{ site.url }}/img/{{ group.name | slugify }}.jpg" style="width:100%" alt="{{ group.name }}">
+        <div class="w3-card-2 w3-margin">
+            <ul class="w3-ul w3-hoverable w3-white">
+                {% for item in group.items %}
+                    <li class="w3-padding-16">
+                        <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
+                            <h4 class="w3-large">{{ item.nome }}</h4>
                         </a>
-                        <div class="w3-container w3-white">
-                            <h4>
-                                <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
-                                {{ item.nome }}
-                                </a>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 {% endfor %}
