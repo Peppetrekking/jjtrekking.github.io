@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   per coloro che desiderano il riposo nella quiete come per
   coloro che cercano nella fatica un riposo ancora più forte.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jjtrekking.github.io" # the base hostname & protocol for your site
+url: "https://jjtrekking.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
