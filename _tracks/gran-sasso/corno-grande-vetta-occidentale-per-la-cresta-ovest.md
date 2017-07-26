@@ -6,6 +6,7 @@ gruppo-id: gran-sasso
 gruppo: Gran Sasso
 quota: "2912"
 dislivello: "800"
+layout: track
 ---
 
 La Cresta Ovest è la via più spettacolare e divertente per salire alla Vetta Occidentale del Corno Grande, la cima più alta dell'intero Appennino (2912 mt).
