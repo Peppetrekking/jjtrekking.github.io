@@ -52,3 +52,10 @@ layout: home
 
     </div>
 {% endfor %}
+
+
+
+{% assign image_files = site.static_files | where: "image", true %}
+{% for img in image_files %}
+    <p>{{ img.path }}</p>
+{% endfor %}

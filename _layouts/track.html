@@ -23,6 +23,29 @@
         {{ content }}
     </div>
 
+    <!-- Gallery -->
+    <div class="w3-content w3-container w3-padding-32 w3-large">
+
+        {% assign gallery_gruppo =  page.gruppo | slugify %}
+        {% assign gallery_nome = page.nome | slugify %}
+        {% assign gallery_id = gallery_gruppo | append: '/' | append: gallery_nome %}
+
+        {% assign gallery = site.data.galleries | where:"id",gallery_id %}
+        {% assign gallery = gallery[0] %}
+
+        <div class="w3-row-padding">
+            {% for photo in gallery.images %}
+                <div class="w3-col l4 m6 w3-margin-bottom">
+                    <a href="{{ gallery.path }}/{{ photo.name }}" data-lightbox="{{ gallery.id }}" title="{{ photo.text }}">
+                    <img src="{{ gallery.path }}/{{ photo.thumb }}" style="width:100%" title="{{ photo.text }}" alt="{{ photo.text }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
     {% include footer.html %}
 
   </body>

@@ -1,0 +1,39 @@
+- id: gran-sasso/corno-grande-vetta-occidentale-per-la-cresta-ovest
+  description: Corno Grande, Vetta Occidentale per la Cresta Ovest
+  path: /img/gran-sasso/corno-grande-vetta-occidentale-per-la-cresta-ovest
+  images:
+  - name: img01.jpg
+    thumb: thumb01.jpg
+    text: The first image
+  - name: img02.jpg
+    thumb: thumb02.jpg
+    text: The second image
+  - name: img03.jpg
+    thumb: thumb03.jpg
+    text: The third image
+  - name: img04.jpg
+    thumb: thumb04.jpg
+    text: The forth image
+  - name: img05.jpg
+    thumb: thumb05.jpg
+    text: The fifth image
+- id: gran-sasso/corno-grande-vetta-occidentale-per-la-via-normale
+  description: Corno Grande, Vetta Occidentale per la via Normale
+  path: /img/gran-sasso/corno-grande-vetta-occidentale-per-la-via-normale
+  images:
+  - name: img01.jpg
+    thumb: thumb01.jpg
+    text: The first image
+  - name: img02.jpg
+    thumb: thumb02.jpg
+    text: The second image
+- id: carseolani/monte-cervia
+  description: Monte Cervia
+  path: /img/carseolani/monte-cervia
+  images:
+  - name: img01.jpg
+    thumb: thumb01.jpg
+    text: The first image
+  - name: img02.jpg
+    thumb: thumb02.jpg
+    text: The second image

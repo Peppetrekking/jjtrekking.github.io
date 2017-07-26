@@ -1,14 +1,12 @@
 ---
 title: Corno Grande, Cresta Ovest
 excerpt: Corno Grande, Cresta Ovest
-nome:  "Corno Grande, Cresta Ovest"
+nome:  "Corno Grande, Vetta Occidentale per la Cresta Ovest"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso
 quota: "2912"
 dislivello: "800"
 ---
-
-<div markdown="1">
 
 La Cresta Ovest è la via più spettacolare e divertente per salire alla Vetta Occidentale del Corno Grande, la cima più alta dell'intero Appennino (2912 mt).
 E' un itinerario entusiasmante e indimenticabile, per la sua eccezionale ultra-panoramicità e per le sensazioni che regala nel percorrerlo.
@@ -56,28 +54,3 @@ ore 8:00 inizio del cammino dal piazzale di Campo Imperatore
 
 ## Note
 Il percorso potrà essere modificato dagli organizzatori in funzione delle condizioni ambientali e dei partecipanti
-
-</div>
-
-<div markdown="0">
-    <div class="w3-row-padding">
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-            <img src="/img/mountains.jpg" style="width:99%" alt="Concrete meets bricks">
-        </div>
-    </div>
-</div>

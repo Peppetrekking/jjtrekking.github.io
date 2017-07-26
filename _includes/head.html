@@ -9,4 +9,13 @@
     <link rel="stylesheet" href="{{ "/css/jjt.css" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/lib/lightbox/css/lightbox.min.css" | prepend: site.baseurl | prepend: site.url }}">
+    <script src="{{ "/lib/lightbox/js/lightbox-plus-jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+
+    <script>
+        lightbox.option({
+          'albumLabel': 'Immagine %1 di %2'
+        })
+    </script>
+
 </head>

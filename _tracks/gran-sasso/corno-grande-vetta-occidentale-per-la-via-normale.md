@@ -1,5 +1,5 @@
 ---
-nome:  "Corno Grande, via Normale"
+nome:  "Corno Grande, Vetta Occidentale per la via Normale"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso
 quota: "2912"
