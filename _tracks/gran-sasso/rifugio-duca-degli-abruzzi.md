@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Rifugio Duca degli Abbruzzi"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso

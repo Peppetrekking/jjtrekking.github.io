@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Rifugio Franchetti"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso

@@ -1,4 +1,5 @@
 ---
+layout: track
 title: Monte Cervia
 excerpt: Monte Cervia
 nome:  "Monte Cervia"

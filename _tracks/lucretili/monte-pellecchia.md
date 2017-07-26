@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Monte Pellecchia"
 gruppo-id: lucretili
 gruppo: Lucretili

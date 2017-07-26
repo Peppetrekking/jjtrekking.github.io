@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Monte Tarino"
 gruppo-id: sibillini
 gruppo: Sibillini

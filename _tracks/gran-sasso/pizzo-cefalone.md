@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Pizzo Cefalone"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso

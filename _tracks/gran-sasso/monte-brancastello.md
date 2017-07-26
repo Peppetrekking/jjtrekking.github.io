@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Monte Brancastello"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso

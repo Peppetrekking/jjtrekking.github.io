@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Monte Follettoso"
 gruppo-id: lucretili
 gruppo: Lucretili

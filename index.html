@@ -14,8 +14,8 @@ layout: home
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-32" id="about">
-  <p class="w3-center w3-large"><em>La montagna è fatta per tutti, non solo per gli alpinisti: <br />
-      per coloro che desiderano il riposo nella quiete <br />
+  <p class="w3-center w3-large"><em>La montagna è fatta per tutti, non solo per gli alpinisti:
+      per coloro che desiderano il riposo nella quiete
       come per coloro che cercano nella fatica un riposo ancora più forte.</em></p>
   <p class="w3-center w3-medium"><em>Guido Rey</em></p>
 </div>
@@ -51,11 +51,4 @@ layout: home
             </ul>
 
     </div>
-{% endfor %}
-
-
-
-{% assign image_files = site.static_files | where: "image", true %}
-{% for img in image_files %}
-    <p>{{ img.path }}</p>
 {% endfor %}

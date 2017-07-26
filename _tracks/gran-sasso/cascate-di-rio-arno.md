@@ -1,4 +1,5 @@
 ---
+layout: track
 nome:  "Cascate di Rio Arno"
 gruppo-id: gran-sasso
 gruppo: Gran Sasso
