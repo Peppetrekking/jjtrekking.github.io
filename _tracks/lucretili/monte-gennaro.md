@@ -1,10 +1,12 @@
 ---
 layout: track
-nome:  "Monte Gennaro"
-gruppo-id: lucretili
+title: Monte Gennaro
+excerpt: Monte Gennaro
 gruppo: Lucretili
-quota: "1200"
-dislivello: "400"
+quota: 1200 mt
+dislivello: 400 mt
+difficolta: E
+lunghezza: 
 ---
 
 Monte Gennaro

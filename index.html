@@ -26,11 +26,11 @@ layout: home
 </div>
 
 {% assign tracks = site.tracks %}
-{% assign groups = tracks | group_by: "gruppo" | sort: "nome" %}
+{% assign groups = tracks | group_by: "gruppo" | sort: "title" %}
 
 <!-- Container (Tracks Section) -->
 {% for group in groups %}
-    <div class="w3-content w3-container w3-padding-32" style="max-width:1280px" id="track-{{ group.name }}">
+    <div class="w3-content w3-container w3-padding-32" style="max-width:1280px" id="track-{{ group.name | slugify }}">
 
             <!-- Parallax Image with Group Text -->
             <div class="bgimg-2 w3-display-container w3-opacity-min w3-greyscale-min" style="background-image: url('/img/{{ group.name | slugify }}.jpg')">
@@ -40,13 +40,13 @@ layout: home
             </div>
 
             <!-- List of Items in Group -->
-            <ul class="w3-ul w3-border w3-hoverable w3-white">
+            <ul class="w3-ul w3-border-right w3-border-left w3-hoverable w3-white">
                 {% for item in group.items %}
-                    <li class="w3-padding-16 w3-hover-light-grey">
-                        <a class="jj-noline" href="{{ site.url }}/itinerari/{{ group.name | slugify }}/{{ item.nome | slugify }}" title="{{ item.nome }}">
-                            <h4 class="w3-large">{{ item.nome }}</h4>
-                        </a>
+                    <a class="jj-noline" href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+                    <li class="w3-padding-16 w3-hover-light-grey w3-border-bottom">
+                        <h4 class="w3-large">{{ item.title }}</h4>
                     </li>
+                </a>
                 {% endfor %}
             </ul>
 

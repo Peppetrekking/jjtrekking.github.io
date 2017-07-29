@@ -1,10 +1,12 @@
 ---
 layout: track
-nome:  "Monte Follettoso"
-gruppo-id: lucretili
+title: Monte Follettoso
+excerpt: Monte Follettoso
 gruppo: Lucretili
-quota: "1200"
-dislivello: "400"
+quota: 1200 mt
+dislivello: 400 mt
+difficolta: E
+lunghezza: 
 ---
 
 Monte Follettoso

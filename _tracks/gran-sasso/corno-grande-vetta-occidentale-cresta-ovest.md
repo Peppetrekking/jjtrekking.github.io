@@ -1,12 +1,12 @@
 ---
 layout: track
-title: Corno Grande, Cresta Ovest
-excerpt: Corno Grande, Cresta Ovest
-nome:  "Corno Grande, Vetta Occidentale per la Cresta Ovest"
-gruppo-id: gran-sasso
+title: Corno Grande, Vetta Occidentale per la Cresta Ovest
+excerpt: Corno Grande, Vetta Occidentale per la Cresta Ovest
 gruppo: Gran Sasso
-quota: "2912"
-dislivello: "800"
+quota: 2912 mt
+dislivello: 800 mt
+difficolta: EE
+lunghezza: 5 km (andata)
 ---
 
 La Cresta Ovest è la via più spettacolare e divertente per salire alla Vetta Occidentale del Corno Grande, la cima più alta dell'intero Appennino (2912 mt).
@@ -23,35 +23,3 @@ Dal piazzale, superato l'osservatorio astronomico e il bivio per il Rifugio Duca
 Da questo momento si prosegue in cresta, con ripetuti attraversamenti da un lato e dall'altro del filo, facendo attenzione a seguire i bollini rossi e bianchi che segnalano l'esile traccia su roccia. La via è quasi sempre aerea e alterna facili passaggi su roccia, alcuni con leggera esposizione, a tratti su breccia e rocce rotte. Nell'ultimo tratto il percorso confluisce nella via Normale prima di guadagnare la vetta (2912 mt).
 
 Il ritorno può essere per la stessa via oppure per la via Normale.
-
-Dislivello: ca 800 mt
-Difficoltà: EE (passaggi di I° grado)
-Distanza: 5 km (andata)
-Durata: 3 ore e mezza (andata)
-
-## Equipaggiamento
-
-### Cosa indossare
-- Abbigliamento sportivo a strati: maglietta intima, secondo strato leggero a manica lunga, pile, giacchetto leggero antivento (tipo kway)
-- Pantaloni da escursione, o comunque leggeri e comodi (no jeans)
-- Scarponcini e calze da trekking - OBBLIGATORI alti alla caviglia
-- Cappello a falda circolare
-- Occhiali da sole (di plastica, avvolgenti e categoria 4)
-- Zaino (22-32 lt), rigorosamente con spallacci larghi regolabili e con cinture al bacino e al torace
-
-### Cosa mettere nello zaino
-- Crema solare (protezione minimo 30)
-- Stick labbra
-- Maglietta di ricambio (da portare se l'intimo è di cotone)
-- Lacci di riserva per le scarpe
-- Fazzoletti di carta
-- Acqua, minimo 1,5 lt
-- Pranzo al sacco (adeguato per attività sportiva)
-
-## Appuntamento
-ore 6:00 partenza da Villa Adriana
-ore 6:40 partenza da Vicovaro
-ore 8:00 inizio del cammino dal piazzale di Campo Imperatore
-
-## Note
-Il percorso potrà essere modificato dagli organizzatori in funzione delle condizioni ambientali e dei partecipanti

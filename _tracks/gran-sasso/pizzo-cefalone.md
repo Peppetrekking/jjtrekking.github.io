@@ -1,10 +1,12 @@
 ---
 layout: track
-nome:  "Pizzo Cefalone"
-gruppo-id: gran-sasso
+title: Pizzo Cefalone
+excerpt: Pizzo Cefalone
 gruppo: Gran Sasso
-quota: "2385"
-dislivello: "600"
+quota: 2385 mt
+dislivello: 600 mt
+difficolta: E+
+lunghezza: 
 ---
 
 Pizzo Cefalone

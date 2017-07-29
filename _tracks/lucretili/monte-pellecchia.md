@@ -1,10 +1,12 @@
 ---
 layout: track
-nome:  "Monte Pellecchia"
-gruppo-id: lucretili
+title: Monte Pellecchia
+excerpt: Monte Pellecchia
 gruppo: Lucretili
-quota: "1250"
-dislivello: "400"
+quota: 1250 mt
+dislivello: 400 mt
+difficolta: E
+lunghezza: 
 ---
 
 Monte Pellecchia

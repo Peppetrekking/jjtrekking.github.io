@@ -2,11 +2,11 @@
 layout: track
 title: Monte Cervia
 excerpt: Monte Cervia
-nome:  "Monte Cervia"
-gruppo-id: carseolani
 gruppo: Carseolani
-quota: "1250"
-dislivello: "400"
+quota: 1250 mt
+dislivello: 400 mt
+difficolta: E
+lunghezza: 
 ---
 
 Monte Cervia

@@ -1,53 +1,58 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  {% include head.html %}
+<div class="w3-display-container w3-opacity-min">
+    <img src="/img/mountains.jpg" style="width:100%;min-height:100px;max-height:200px;">
+</div>
 
-  <body>
+<div class="w3-content w3-container w3-padding-32">
+    <h1 class="w3-center w3-xxlarge w3-wide">{{ page.title }}</h1>
+</div>
 
-    <div class="w3-display-container w3-opacity-min">
-        <img src="/img/mountains.jpg" style="width:100%;min-height:200px;max-height:400px;">
-        <!--div class="w3-display-topmiddle" style="white-space:nowrap;">
-            <img class="w3-image" src="/img/jjtrekking-logo.png" alt="J&amp;J Trekking">
-        </div-->
-        <!--div class="w3-display-middle" style="white-space:nowrap;">
-            <h1 class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">{{ page.title }}</h1>
-        </div-->
+<div class="w3-content w3-container w3-padding-32 w3-large">
+    {{ content }}
+</div>
+
+<div class="w3-content w3-container w3-padding-32 w3-large">
+    <div class="w3-panel w3-pale-yellow w3-topbar w3-bottombar w3-border-amber">
+        <table class="w3-table w3-responsive">
+            <tr>
+              <td><b>Quota di arrivo</b></td>
+              <td>{{ page.quota }}</td>
+            </tr>
+            <tr>
+              <td><b>Dislivello</b></td>
+              <td>{{ page.dislivello }}</td>
+            </tr>
+            <tr>
+              <td><b>Difficoltà</b></td>
+              <td>{{ page.difficolta }}</td>
+            </tr>
+            <tr>
+              <td><b>Lunghezza</b></td>
+              <td>{{ page.lunghezza }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Gallery -->
+<div class="w3-content w3-container w3-padding-32 w3-large">
+
+    {% assign gallery_gruppo =  page.gruppo | slugify %}
+    {% assign gallery_nome = page.nome | slugify %}
+    {% assign gallery_id = gallery_gruppo | append: '/' | append: gallery_nome %}
+
+    {% assign gallery = site.data.galleries | where:"id",gallery_id %}
+    {% assign gallery = gallery[0] %}
+
+    <div class="w3-row-padding">
+        {% for photo in gallery.images %}
+            <div class="w3-col l4 m6 w3-margin-bottom">
+                <img src="{{ gallery.path }}/{{ photo.thumb }}" style="width:100%" title="{{ photo.text }}" alt="{{ photo.text }}">
+            </div>
+        {% endfor %}
     </div>
 
-    <div class="w3-content w3-container w3-padding-32">
-        <h1 class="w3-center w3-xxlarge w3-wide">{{ page.title }}</h1>
-    </div>
-
-    <div class="w3-content w3-container w3-padding-32 w3-large">
-        {{ content }}
-    </div>
-
-    <!-- Gallery -->
-    <div class="w3-content w3-container w3-padding-32 w3-large">
-
-        {% assign gallery_gruppo =  page.gruppo | slugify %}
-        {% assign gallery_nome = page.nome | slugify %}
-        {% assign gallery_id = gallery_gruppo | append: '/' | append: gallery_nome %}
-
-        {% assign gallery = site.data.galleries | where:"id",gallery_id %}
-        {% assign gallery = gallery[0] %}
-
-        <div class="w3-row-padding">
-            {% for photo in gallery.images %}
-                <div class="w3-col l4 m6 w3-margin-bottom">
-                    <a href="{{ gallery.path }}/{{ photo.name }}" data-lightbox="{{ gallery.id }}" title="{{ photo.text }}">
-                    <img src="{{ gallery.path }}/{{ photo.thumb }}" style="width:100%" title="{{ photo.text }}" alt="{{ photo.text }}">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-
-    </div>
-
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+</div>
